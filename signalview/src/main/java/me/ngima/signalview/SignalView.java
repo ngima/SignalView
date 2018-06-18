@@ -42,6 +42,14 @@ public class SignalView extends android.support.v7.widget.AppCompatImageView {
         return mSignal;
     }
 
+    public void mapAndSetSignal(int signal) {
+        if (signal >= -40) mSignal = Signal.STATE_SIGNAL_4;
+        else if (signal >= -60) mSignal = Signal.STATE_SIGNAL_3;
+        else if (signal >= -80) mSignal = Signal.STATE_SIGNAL_2;
+        else if (signal >= -90) mSignal = Signal.STATE_SIGNAL_1;
+        else mSignal = Signal.STATE_SIGNAL_0;
+    }
+
     public void setSignal(Signal signal) {
         this.mSignal = signal;
         refresh();

@@ -44,6 +44,17 @@ public class BatteryLevelView extends android.support.v7.widget.AppCompatImageVi
         return mSignal;
     }
 
+    public void mapAndSetSignal(int level) {
+        if (level <= 20) mSignal = Signal.BATTERY_20;
+        else if (level <= 30) mSignal = Signal.BATTERY_30;
+        else if (level <= 50) mSignal = Signal.BATTERY_50;
+        else if (level <= 60) mSignal = Signal.BATTERY_60;
+        else if (level <= 80) mSignal = Signal.BATTERY_80;
+        else if (level <= 90) mSignal = Signal.BATTERY_90;
+        else mSignal = Signal.BATTERY_100;
+        refresh();
+    }
+
     public void setSignal(Signal signal) {
         this.mSignal = signal;
         refresh();
