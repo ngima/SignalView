@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SignalView">
+        <attr name="battery" format="enum">
+            <enum name="ic_battery_20" value="20" />
+            <enum name="ic_battery_30" value="30" />
+            <enum name="ic_battery_50" value="50" />
+            <enum name="ic_battery_60" value="60" />
+            <enum name="ic_battery_80" value="80" />
+            <enum name="ic_battery_90" value="90" />
+            <enum name="ic_battery_100" value="100" />
+        </attr>
+
+        <attr name="signal" format="enum">
+            <enum name="ic_signal_wifi_0" value="0" />
+            <enum name="ic_signal_wifi_1" value="1" />
+            <enum name="ic_signal_wifi_2" value="2" />
+            <enum name="ic_signal_wifi_3" value="3" />
+            <enum name="ic_signal_wifi_4" value="4" />
+        </attr>
+    </declare-styleable>
+</resources>
